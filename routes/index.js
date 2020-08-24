@@ -6,24 +6,36 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-const loginapi = require('../src/data/login');
-const registration = require('../src/data/registration');
-const otp = require('../src/data/otp');
-const usertype = require('../src/data/typeuser')
-const userdate = require('../src/data/dateuser');
+// const loginapi = require('../src/data/login');
+// const registration = require('../src/data/registration');
+// const otp = require('../src/data/otp');
+// const usertype = require('../src/data/typeuser')
+// const userdate = require('../src/data/dateuser');
 const fileuploads = require('../src/data/fileupload');
-const roles = require('../src/data/newrole')
-const userRights =require('../src/data/userRights');
-const hospitallocation = require('../src/data/hospitallocation')
- router.use('/loginapi',loginapi);
- router.use('/registration',registration);
- router.use('/otp',otp);
- router.use('/usertype',usertype);
- router.use('/userdate',userdate);
+const exceldata = require('../src/data/exceldata');
+const jsontomongo = require('../scripts/jsontomongo')
+
+// const roles = require('../src/data/newrole')
+// const userRights =require('../src/data/userRights');
+// const hospitallocation = require('../src/data/hospitallocation')
+// const imagtotext = require('../src/data/imagtotext')
+
+
+//  router.use('/loginapi',loginapi);
+//  router.use('/registration',registration);
+//  router.use('/otp',otp);
+//  router.use('/usertype',usertype);
+//  router.use('/userdate',userdate);
  router.use('/fileuploads',fileuploads);
- router.use('/roles',roles);
- router.use('/userRights',userRights);
- router.use('/hospitallocation',hospitallocation);
+ router.use('/exceldata',exceldata);
+ router.use('/jsontomongo',jsontomongo);
+
+//  router.use('/roles',roles);
+//  router.use('/userRights',userRights);
+//  router.use('/hospitallocation',hospitallocation);
+//  router.use('/imagtotext',imagtotext);
+
+ 
 
  
 

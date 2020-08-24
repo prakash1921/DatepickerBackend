@@ -33,7 +33,7 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
-const mongoUrl='mongodb://localhost/Ecommerce'
+const mongoUrl='mongodb://localhost/Election'
 
 var conc = mongoose.connect(mongoUrl,
   (err)=>{
