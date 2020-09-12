@@ -86,6 +86,11 @@ router.get('/getfileById/:id',function(req,res){
     })
 });
 
+router.get('/gethome',function(req,res){
+    var title="Enter into Home Page";
+res.send(title);
+}
+
 router.post('/remove',function(req,res){
     uploaddischarge.remove({_id:req.body.id},(err,response) => {
         if(err){
