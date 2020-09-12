@@ -119,5 +119,5 @@ function student(){
 
 })
 }
-student()
+// student()
 module.exports= router;

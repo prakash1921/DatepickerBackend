@@ -14,6 +14,8 @@ router.get('/', function(req, res, next) {
 const fileuploads = require('../src/data/fileupload');
 const exceldata = require('../src/data/exceldata');
 const jsontomongo = require('../scripts/jsontomongo')
+const statescript = require('../scripts/statescript')
+const state = require('../src/data/statedata')
 
 // const roles = require('../src/data/newrole')
 // const userRights =require('../src/data/userRights');
@@ -29,6 +31,9 @@ const jsontomongo = require('../scripts/jsontomongo')
  router.use('/fileuploads',fileuploads);
  router.use('/exceldata',exceldata);
  router.use('/jsontomongo',jsontomongo);
+ router.use('/statescript',statescript);
+ router.use('/state',state);
+
 
 //  router.use('/roles',roles);
 //  router.use('/userRights',userRights);

@@ -32,26 +32,26 @@ function datafromjsonfiletomogodb(){
                    console.log('err',err);
                }else{
                    console.log('done',count++);
-                   async.eachSeries(users,function(file,outercb){
-                    if(file){
-                        file.ID=a[0];
-                     var savejsonDatasingle= new JsonDataSingle(file);
-                     savejsonDatasingle.save(function(err,response){
-                         if(err){
-                             console.log('err',err);
-                         }else{
-                             console.log(' single done',innercount++);
-                             outercb();
-                         }
-                     })
-                    //  outercb();
-                    }else{
-                     outercb();
-                    }
-                },function(re,res){
-                    console.log('done single')
-                })
-               }
+                //    async.eachSeries(users,function(file,outercb){
+                //     if(file){
+                //         file.ID=a[0];
+                //      var savejsonDatasingle= new JsonDataSingle(file);
+                //      savejsonDatasingle.save(function(err,response){
+                //          if(err){
+                //              console.log('err',err);
+                //          }else{
+                //              console.log(' single done',innercount++);
+                //              outercb();
+                //          }
+                //      })
+                //     }else{
+                //      outercb();
+                //     }
+                // },function(re,res){
+                //     console.log('done single')
+                // })
+              
+            }
            })
            
          
@@ -60,5 +60,5 @@ function datafromjsonfiletomogodb(){
     });
 }
 
-// datafromjsonfiletomogodb();
+datafromjsonfiletomogodb();
 module.exports= router;

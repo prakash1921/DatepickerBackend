@@ -33,8 +33,8 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
-const mongoUrl='mongodb://localhost/Election'
 
+const mongoUrl='mongodb+srv://sohamdb:soham123@electioncluster.u8osy.mongodb.net/test';
 var conc = mongoose.connect(mongoUrl,
   (err)=>{
       if(err){
@@ -45,6 +45,7 @@ var conc = mongoose.connect(mongoUrl,
       console.log("mongoose connected ")
   }
   });
+  // const mongoUrl='mongodb://localhost/Election'
 // error handler
 // app.use(function(err, req, res, next) {
 //   // set locals, only providing error in development
