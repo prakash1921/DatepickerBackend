@@ -8,7 +8,8 @@ var hbs = require('hbs');
 const mongoose = require('mongoose');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var port = process.env.port || 8000;
+// var port = process.env.port || 8000;
+var port = process.env.PORT
 var app = express();
 var cors = require('cors');
 // view engine setup
