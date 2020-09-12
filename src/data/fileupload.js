@@ -76,6 +76,7 @@ function getuploaddischargeIncrementID(cb){
     }).sort({UploadID :-1}).limit(1);
 }
 router.get('/getfileById/:id',function(req,res){
+    console.log("sss  url hit");
     uploaddischarge.find({and:[{OPDIPDNO:req.params.id},{RowStatus:0}]},(err,response) => {
         if(err){
             res.send(err);
