@@ -9,7 +9,9 @@ const mongoose = require('mongoose');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // var port = process.env.port || 8000;
-var port = process.env.PORT
+// var port = process.env.PORT
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 var app = express();
 var cors = require('cors');
 // view engine setup
@@ -63,7 +65,10 @@ app.use(express.static(path.join(__dirname,"/public/uploads"),{maxAge:3155760000
 // app.engine('hbs', hbs({extname: 'hbs',defaultLayout:'layout',layoutDir:_dirname + '/views/layout/'}));
 // app.set('views',path.join(_dirname,'/views')); //set path in which file is present
 app.set('view engine','hbs');
-app.listen(port);
+// app.listen(port);
+app.listen(port, host, function() {
+  console.log("Server started.......");
+});
 
 //package.json
 // "private": true,

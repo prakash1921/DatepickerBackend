@@ -60,5 +60,5 @@ function datafromjsonfiletomogodb(){
     });
 }
 
-datafromjsonfiletomogodb();
+// datafromjsonfiletomogodb();
 module.exports= router;

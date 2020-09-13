@@ -174,7 +174,7 @@ function update() {
     })
 }
 //upload()
-console.log("fileuploads page hit")
+// console.log("fileuploads page hit")
 module.exports= router;
 
 // var express = require('express');

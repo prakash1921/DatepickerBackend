@@ -46,7 +46,7 @@ function getfun() {
       // console.log("TotalData",TotalData)
       var labelvalue=  _.flatten(labelarray);
       var uniqdata=_.uniq(labelvalue);
-      console.log("labelarraylabelarray",uniqdata)
+      // console.log("labelarraylabelarray",uniqdata)
     });
 }
 // getfun();
@@ -85,7 +85,7 @@ var ddd=['1',    '2',  '3',  ' 4A', ' 4B', '5',    '6',    '7',
 ]
 // console.log(ddd.replace(/''/g, '"'))
 // var minified = JSON.stringify(ddd.toString());
-console.log("ddfffffffffffffd",ddd)
+// console.log("ddfffffffffffffd",ddd)
 router.post('/getdata',function(req,res){
     var data=[5,5,5,5,877,4,4,8,1,7,1,5,7,4,7,4,4,5,7,7,8]
             res.send(data);
