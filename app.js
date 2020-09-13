@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 // var port = process.env.port || 8000;
 // var port = process.env.PORT
 const host = '0.0.0.0';
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 var app = express();
 var cors = require('cors');
 // view engine setup
