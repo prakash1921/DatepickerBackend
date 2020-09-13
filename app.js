@@ -65,10 +65,10 @@ app.use(express.static(path.join(__dirname,"/public/uploads"),{maxAge:3155760000
 // app.engine('hbs', hbs({extname: 'hbs',defaultLayout:'layout',layoutDir:_dirname + '/views/layout/'}));
 // app.set('views',path.join(_dirname,'/views')); //set path in which file is present
 app.set('view engine','hbs');
-app.listen(port);
-// app.listen(port, host, function() {
-//   console.log("Server started.......");
-// });
+// app.listen(port);
+app.listen(port,function() {
+  console.log("Server started.......");
+});
 
 //package.json
 // "private": true,
