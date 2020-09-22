@@ -16,6 +16,9 @@ const exceldata = require('../src/data/exceldata');
 const jsontomongo = require('../scripts/jsontomongo')
 const statescript = require('../scripts/statescript')
 const state = require('../src/data/statedata')
+const electionscript = require('../scripts/electionscript');
+const election =require('../src/data/election');
+const newstate =require('../src/data/newstate')
 
 // const roles = require('../src/data/newrole')
 // const userRights =require('../src/data/userRights');
@@ -31,8 +34,13 @@ const state = require('../src/data/statedata')
  router.use('/fileuploads',fileuploads);
  router.use('/exceldata',exceldata);
  router.use('/jsontomongo',jsontomongo);
+ router.use('/electionscript',electionscript);
  router.use('/statescript',statescript);
  router.use('/state',state);
+ router.use('/election',election);
+ router.use('/newstate',newstate);
+
+
 
 
 //  router.use('/roles',roles);

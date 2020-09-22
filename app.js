@@ -38,6 +38,7 @@ app.use(function(req, res, next) {
 });
 
 const mongoUrl='mongodb+srv://sohamdb:soham123@electioncluster.u8osy.mongodb.net/test';
+//  const mongoUrl='mongodb://localhost/Election';
 var conc = mongoose.connect(mongoUrl,
   (err)=>{
       if(err){
